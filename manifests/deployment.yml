@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: nkhalifaazuredevopsgithubacraksapp 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nkhalifaazuredevopsgithubacraksapp
+  template:
+    metadata:
+      labels:
+        app: nkhalifaazuredevopsgithubacraksapp 
+    spec:
+      containers:
+        - name: nkhalifaazuredevopsgithubacraksapp 
+          image: aksdeveloperacr.azurecr.io/nkhalifaazuredevopsgithubacraksapp
+          ports:
+          - containerPort: 8080
